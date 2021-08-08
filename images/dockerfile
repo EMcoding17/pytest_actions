@@ -1,0 +1,11 @@
+#Descarga de Ubuntu 20.04
+FROM ubuntu:20.04
+#Etiquetas sobre el autor
+LABEL description = "Imagen para trabajar con Ubuntu, Python y Pytest en un contenedor"
+LABEL mainteiner = "Romero Sosa Emma Yuridia"
+LABEL version = "0.1"
+#Actualizacion de Ubuntu
+RUN apt update
+RUN apt install -y python3
+RUN apt install -y python3-pip
+RUN pip install pytest
